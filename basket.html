@@ -105,46 +105,38 @@
                                 </div>
                                 
                                 <!-- Photos-->
-                                <!-- Photos -->
-<div class="row">
-    <div class="col-md-4">
-        <img src="assets/WhatsApp Image 2024-12-18 at 12.20.18 AM (1).jpeg" class="img-fluid" alt="Photo 1">
-    </div>
-    <div class="col-md-4">
-        <img src="assets/WhatsApp Image 2024-12-19 at 10.05.16 PM.jpeg" class="img-fluid" alt="Photo 2">
-    </div>
-    <div class="col-md-4">
-        <img src="assets/WhatsApp Image 2024-12-19 at 10.04.52 PM.jpeg" class="img-fluid" alt="Photo 3">
-    </div>
-</div>
-<div class="row">
-    <div class="col-md-4">
-        <img src="assets/WhatsApp Image 2024-12-19 at 10.04.47 PM.jpeg" class="img-fluid" alt="Photo 4">
-    </div>
-    <div class="col-md-4">
-        <img src="assets/WhatsApp Image 2024-12-19 at 10.04.36 PM.jpeg" class="img-fluid" alt="Photo 5">
-    </div>
-    <div class="col-md-4">
-        <img src="assets/WhatsApp Image 2024-12-18 at 12.21.19 AM.jpeg" class="img-fluid" alt="Photo 6">
-    </div>
-</div>
-<div class="row">
-    <div class="col-md-4">
-        <img src="assets/WhatsApp Image 2024-12-18 at 12.20.16 AM (1).jpeg" class="img-fluid" alt="Photo 7">
-    </div>
-    <div class="col-md-4">
-        <img src="assets/WhatsApp Image 2024-12-18 at 12.20.16 AM.jpeg" class="img-fluid" alt="Photo 8">
-    </div>
-    <div class="col-md-4">
-        <img src="assets/WhatsApp Image 2024-12-18 at 12.20.14 AM.jpeg" class="img-fluid" alt="Photo 9">
-    </div>
-</div>
-<div class="row">
-    <div class="col-md-4">
-        <img src="assets/WhatsApp Image 2024-12-18 at 12.20.13 AM.jpeg" class="img-fluid" alt="Photo 10">
-    </div>
-</div>
-
+                                 <!-- Bootstrap Carousel for Photos -->
+                    <div id="photoCarousel" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="assets/WhatsApp Image 2024-12-18 at 12.20.18 AM (1).jpeg" class="d-block w-100 zoom-img" alt="Photo 1">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="assets/WhatsApp Image 2024-12-19 at 10.05.16 PM.jpeg" class="d-block w-100 zoom-img" alt="Photo 2">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="assets/WhatsApp Image 2024-12-19 at 10.04.52 PM.jpeg" class="d-block w-100 zoom-img" alt="Photo 3">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="assets/WhatsApp Image 2024-12-19 at 10.04.47 PM.jpeg" class="d-block w-100 zoom-img" alt="Photo 4">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="assets/WhatsApp Image 2024-12-19 at 10.04.36 PM.jpeg" class="d-block w-100 zoom-img" alt="Photo 5">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="assets/WhatsApp Image 2024-12-18 at 12.21.19 AM.jpeg" class="d-block w-100 zoom-img" alt="Photo 6">
+                            </div>
+                        </div>
+                        <!-- Controls -->
+                        <button class="carousel-control-prev" type="button" data-bs-target="#photoCarousel" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#photoCarousel" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
                             </div>
                         </div>
                     </div>
@@ -171,4 +163,13 @@
         <!-- Bootstrap JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     </body>
+    <!-- Custom Zoom Effect CSS -->
+<style>
+    .zoom-img {
+        transition: transform 0.3s ease-in-out;
+    }
+    .zoom-img:hover {
+        transform: scale(1.2);
+    }
+</style>
 </html>
