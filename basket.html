@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galerie et Carrousel</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Accueil</a>
+            <a href="about.html">À propos</a>
+            <a href="performances.html" class="active">Performances</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="photos">
+            <h1>Galerie de Photos</h1>
+            <div class="gallery">
+                <img src="photos/photo1.jpg" alt="Photo 1" class="thumbnail" onclick="openCarousel(0)">
+                <img src="photos/photo2.jpg" alt="Photo 2" class="thumbnail" onclick="openCarousel(1)">
+                <img src="photos/photo3.jpg" alt="Photo 3" class="thumbnail" onclick="openCarousel(2)">
+            </div>
+        </section>
+
+        <section id="carousel" class="carousel">
+            <span class="close" onclick="closeCarousel()">&times;</span>
+            <div class="carousel-inner">
+                <img src="photos/photo1.jpg" alt="Photo 1">
+                <img src="photos/photo2.jpg" alt="Photo 2">
+                <img src="photos/photo3.jpg" alt="Photo 3">
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Malick Kakoro - Tous droits réservés</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
