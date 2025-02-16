@@ -1,166 +1,152 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>PorteFolio</title>
-        <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="assets/IMG_5448.JPG" />
-        <!-- Custom Google font-->
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet" />
-        
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="css/styles.css" rel="stylesheet" />
-        <link rel="stylesheet" type="text/css" href="moncss/bootstrap.min.css">
-        <style>
-            /* Zoom effect for carousel images */
-            .zoom-img {
-                transition: transform 0.5s ease;
-            }
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Portfolio de Kakoro">
+    <meta name="author" content="Kakoro">
+    <title>PorteFolio</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/IMG_5448.JPG">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;400;600;800&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Lightbox2 CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+    
+    <style>
+        /* Zoom effect for carousel images */
+        .zoom-img {
+            transition: transform 0.5s ease;
+        }
 
-            .zoom-img:hover {
-                transform: scale(1.1);
-            }
+        .zoom-img:hover {
+            transform: scale(1.1);
+        }
 
-            /* Gallery grid style */
-            .gallery img {
-                width: 100%;
-                height: auto;
-                transition: transform 0.3s ease;
-            }
+        /* Gallery grid style */
+        .gallery img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s ease;
+            border-radius: 8px;
+        }
 
-            .gallery img:hover {
-                transform: scale(1.05);
-            }
-        </style>
-    </head>
-    <body class="d-flex flex-column h-100">
-        <main class="flex-shrink-0">
-            <!-- Navigation-->
-            <nav class="navbar navbar-expand-lg bg-body-tertiary">
-                <div class="container-fluid">
-                    <a class="navbar-brand text-gradient-lick" href="index.html">Kakoro</a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                        <div class="navbar-nav">
-                            <a class="nav-link active" aria-current="page" href="resume.html">Résumé</a>
-                            <a class="nav-link" href="contact.html">Contacts</a>
-                            <a class="nav-link" href="projects.html">Projets</a>
-                            <a class="nav-link" href="basket.html">Basket</a>
-                        </div>
-                    </div>
-                </div>
-            </nav>
-
-            <!-- Media Section (Photos & Videos)-->
-            <section class="py-5">
-                <div class="container px-5">
-                    <div class="row gx-5 justify-content-center">
-                        <div class="col-xxl-8">
-                            <div class="text-center my-5">
-                                <h2 class="display-5 fw-bolder"><span class="text-gradient-lick d-inline">Mes Médias</span></h2>
-                                <p class="lead fw-light mb-4">Voici quelques photos et vidéos de mes performances sur le terrain ainsi que mes projets réalisés.</p>
-                                
-                                <!-- Videos-->
-                                <div class="row mb-5">
-                                    <div class="col-md-6">
-                                        <video controls class="w-100">
-                                            <source src="video-performance.mp4" type="video/mp4">
-                                            Votre navigateur ne supporte pas la vidéo.
-                                        </video>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <video controls class="w-100">
-                                            <source src="video-project.mp4" type="video/mp4">
-                                            Votre navigateur ne supporte pas la vidéo.
-                                        </video>
-                                    </div>
-                                </div>
-                                
-                                <!-- Photos-->
-                               
-                                <!-- Bootstrap Carousel for Photos -->
-                                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-  <ol class="carousel-indicators">
-    <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></li>
-    <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></li>
-    <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></li>
-  </ol>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <a href="assets/WhatsApp Image 2024-12-18 at 12.20.18 AM (1).jpeg" target="_blank">
-        <img class="d-block w-100" src="assets/WhatsApp Image 2024-12-18 at 12.20.18 AM (1).jpeg" alt="First slide">
-      </a>
-    </div>
-    <div class="carousel-item">
-      <a href="assets/WhatsApp Image 2024-12-19 at 10.05.16 PM.jpeg" target="_blank">
-        <img class="d-block w-100" src="assets/WhatsApp Image 2024-12-19 at 10.05.16 PM.jpeg" alt="Second slide">
-      </a>
-    </div>
-    <div class="carousel-item">
-      <a href="assets/WhatsApp Image 2024-12-19 at 10.04.52 PM.jpeg" target="_blank">
-        <img class="d-block w-100" src="assets/WhatsApp Image 2024-12-19 at 10.04.52 PM.jpeg" alt="Third slide">
-      </a>
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
-
-
-
-                                <!-- Photo Gallery Section -->
-                                <div class="row gallery my-5">
-                                    <div class="col-md-4 mb-4">
-                                        <img src="assets/WhatsApp Image 2024-12-18 at 12.20.18 AM (1).jpeg" alt="Gallery Image 1" class="img-fluid">
-                                    </div>
-                                    <div class="col-md-4 mb-4">
-                                        <img src="assets/WhatsApp Image 2024-12-19 at 10.05.16 PM.jpeg" alt="Gallery Image 2" class="img-fluid">
-                                    </div>
-                                    <div class="col-md-4 mb-4">
-                                        <img src="assets/WhatsApp Image 2024-12-19 at 10.04.52 PM.jpeg" alt="Gallery Image 3" class="img-fluid">
-                                    </div>
-                                    <div class="col-md-4 mb-4">
-                                        <img src="assets/WhatsApp Image 2024-12-19 at 10.04.47 PM.jpeg" alt="Gallery Image 4" class="img-fluid">
-                                    </div>
-                                    <div class="col-md-4 mb-4">
-                                        <img src="assets/WhatsApp Image 2024-12-19 at 10.04.36 PM.jpeg" alt="Gallery Image 5" class="img-fluid">
-                                    </div>
-                                    <div class="col-md-4 mb-4">
-                                        <img src="assets/WhatsApp Image 2024-12-18 at 12.21.19 AM.jpeg" alt="Gallery Image 6" class="img-fluid">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </main>
-
-        <!-- Footer-->
-        <footer class="bg-light py-4">
-            <div class="container px-5">
-                <div class="d-flex flex-column flex-md-row align-items-center justify-content-between">
-                    <div class="mb-3 mb-md-0">© 2025 Kakoro</div>
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="d-flex flex-column h-100">
+    <main class="flex-shrink-0">
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg bg-light">
+            <div class="container">
+                <a class="navbar-brand text-primary fw-bold" href="index.html">Kakoro</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link active" href="resume.html">Résumé</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contacts</a></li>
+                        <li class="nav-item"><a class="nav-link" href="projects.html">Projets</a></li>
+                        <li class="nav-item"><a class="nav-link" href="basket.html">Basket</a></li>
+                    </ul>
                 </div>
             </div>
-        </footer>
+        </nav>
 
-        <!-- Bootstrap JS (including Popper.js)-->
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-alpha1/dist/js/bootstrap.min.js"></script>
-    </body>
+        <!-- Media Section (Photos & Videos) -->
+        <section class="py-5">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="fw-bold">Mes Médias</h2>
+                    <p class="text-muted">Voici quelques photos et vidéos de mes performances.</p>
+                </div>
+
+                <!-- Bootstrap Carousel for Photos -->
+                <div id="photoCarousel" class="carousel slide mb-5" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#photoCarousel" data-bs-slide-to="0" class="active"></button>
+                        <button type="button" data-bs-target="#photoCarousel" data-bs-slide-to="1"></button>
+                        <button type="button" data-bs-target="#photoCarousel" data-bs-slide-to="2"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="assets/photo1.jpg" class="d-block w-100 zoom-img" alt="Photo 1">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/photo2.jpg" class="d-block w-100 zoom-img" alt="Photo 2">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/photo3.jpg" class="d-block w-100 zoom-img" alt="Photo 3">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#photoCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#photoCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </button>
+                </div>
+
+                <!-- Photo Gallery with Lightbox -->
+                <div class="row gallery">
+                    <div class="col-md-4 mb-4">
+                        <a href="assets/photo1.jpg" data-lightbox="gallery">
+                            <img src="assets/photo1.jpg" alt="Photo 1" class="img-fluid">
+                        </a>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <a href="assets/photo2.jpg" data-lightbox="gallery">
+                            <img src="assets/photo2.jpg" alt="Photo 2" class="img-fluid">
+                        </a>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <a href="assets/photo3.jpg" data-lightbox="gallery">
+                            <img src="assets/photo3.jpg" alt="Photo 3" class="img-fluid">
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Videos -->
+                <div class="row mt-5">
+                    <div class="col-md-6">
+                        <video controls class="w-100">
+                            <source src="assets/video1.mp4" type="video/mp4">
+                            Votre navigateur ne supporte pas la vidéo.
+                        </video>
+                    </div>
+                    <div class="col-md-6">
+                        <video controls class="w-100">
+                            <source src="assets/video2.mp4" type="video/mp4">
+                            Votre navigateur ne supporte pas la vidéo.
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-light py-4">
+        <div class="container text-center">
+            <p class="mb-0">© 2025 Kakoro</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Lightbox2 JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+</body>
 </html>
