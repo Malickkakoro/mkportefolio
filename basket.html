@@ -4,30 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mon Portfolio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
     <style>
         body {
             background-color: #f8f9fa;
         }
-        .carousel-item img {
+        .gallery img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .presentation img {
             width: 100%;
             height: 400px;
             object-fit: cover;
             border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-        }
-        footer {
-            background: #212529;
-            color: #fff;
-            text-align: center;
-            padding: 10px;
-            margin-top: 20px;
         }
     </style>
 </head>
 <body>
-    <!-- Navigation Menu -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
             <a class="navbar-brand" href="#">Mon Portfolio</a>
@@ -45,38 +43,42 @@
         </div>
     </nav>
 
-    <!-- Galerie avec Carousel -->
+    <section class="presentation container my-5">
+        <h2 class="text-center">Présentation</h2>
+        <img src="assets/IMG_20250108_203338.jpg" alt="Photo de présentation" class="img-fluid">
+    </section>
+
     <section id="gallery" class="container my-5">
         <h2 class="text-center mb-4">Galerie</h2>
-        <div id="galleryCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div id="carouselGallery" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <script>
                     const images = [
-                        "assets/IMG_20250108_203338.jpg", "assets/IMG_20250108_203420.jpg",
-                        "assets/WhatsApp Image 2024-12-18 at 12.20.13 AM.jpeg", "assets/WhatsApp Image 2024-12-18 at 12.20.14 AM.jpeg"
+                        "assets/IMG_20250108_203420.jpg", "assets/WhatsApp Image 2024-12-18 at 12.20.13 AM.jpeg",
+                        "assets/WhatsApp Image 2024-12-18 at 12.20.14 AM.jpeg", "assets/WhatsApp Image 2024-12-18 at 12.20.16 AM (1).jpeg",
+                        "assets/WhatsApp Image 2024-12-18 at 12.20.16 AM.jpeg", "assets/WhatsApp Image 2024-12-18 at 12.20.18 AM (1).jpeg",
+                        "assets/WhatsApp Image 2024-12-18 at 12.21.19 AM.jpeg", "assets/WhatsApp Image 2024-12-19 at 10.04.36 PM.jpeg",
+                        "assets/WhatsApp Image 2024-12-19 at 10.04.47 PM.jpeg", "assets/WhatsApp Image 2024-12-19 at 10.04.52 PM.jpeg",
+                        "assets/WhatsApp Image 2024-12-19 at 10.05.16 PM.jpeg", "assets/2024_03_14_01_46_IMG_9039.JPG",
+                        "assets/2024_04_21_19_25_IMG_9722.JPG", "assets/2024_06_12_14_02_IMG_0530.JPG",
+                        "assets/2024_07_29_23_22_IMG_1313.JPG"
                     ];
                     document.write(images.map((img, index) => `
                         <div class="carousel-item ${index === 0 ? 'active' : ''}">
-                            <img src="${img}" class="d-block w-100" alt="Image ${index + 1}">
-                        </div>`).join(''));
+                            <img src="${img}" class="d-block w-100 gallery">
+                        </div>
+                    `).join(''));
                 </script>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#galleryCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon"></span>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselGallery" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#galleryCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon"></span>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselGallery" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
             </button>
         </div>
     </section>
 
-    <!-- Section Parcours -->
-    <section id="parcours" class="container my-5">
-        <h2 class="text-center">Mon Parcours</h2>
-        <p class="text-center">Description détaillée de ton parcours ici...</p>
-    </section>
-
-    <!-- Vidéo de Présentation -->
     <section class="container my-5 text-center">
         <h2>Présentation Vidéo</h2>
         <div class="ratio ratio-16x9">
@@ -84,21 +86,18 @@
         </div>
     </section>
 
-    <!-- CV en Téléchargement -->
     <section id="cv" class="container my-5 text-center">
         <h2>Mon CV</h2>
         <a href="assets/mon_cv.pdf" class="btn btn-primary" download>Télécharger Mon CV</a>
     </section>
 
-    <!-- Contact -->
     <section id="contact" class="container my-5 text-center">
         <h2>Contact</h2>
         <p>Email: <a href="mailto:kakoro.malick5@gmail.com">kakoro.malick5@gmail.com</a></p>
-        <p>WhatsApp: <a href="https://wa.me/626928839" target="_blank">626928839</a></p>
+        <p>WhatsApp: <a href="https://wa.me/626928839">+226 626928839</a></p>
     </section>
 
-    <!-- Copyright -->
-    <footer>
+    <footer class="bg-dark text-light text-center py-3">
         <p>&copy; 2025 Kakoro Malick. Tous droits réservés.</p>
     </footer>
 
