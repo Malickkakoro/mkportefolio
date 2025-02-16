@@ -4,18 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mon Portfolio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
     <style>
         body {
             background-color: #f8f9fa;
         }
-        .gallery img {
+        .carousel-item img {
             width: 100%;
-            height: 200px;
+            height: 400px;
             object-fit: cover;
             border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        footer {
+            background: #212529;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
         }
     </style>
 </head>
@@ -38,24 +45,28 @@
         </div>
     </nav>
 
-    <!-- Galerie d'Images -->
+    <!-- Galerie avec Carousel -->
     <section id="gallery" class="container my-5">
         <h2 class="text-center mb-4">Galerie</h2>
-        <div class="row g-4">
-            <!-- Insérer ici toutes les images envoyées -->
-            <script>
-                const images = [
-                    "assets/IMG_20250108_203338.jpg", "assets/IMG_20250108_203420.jpg", "assets/WhatsApp Image 2024-12-18 at 12.20.13 AM.jpeg",
-                    "assets/WhatsApp Image 2024-12-18 at 12.20.14 AM.jpeg", "assets/WhatsApp Image 2024-12-18 at 12.20.16 AM (1).jpeg", "assets/WhatsApp Image 2024-12-18 at 12.20.16 AM.jpeg",
-                    "assets/WhatsApp Image 2024-12-18 at 12.20.18 AM (1).jpeg", "assets/WhatsApp Image 2024-12-18 at 12.21.19 AM.jpeg", "assets/WhatsApp Image 2024-12-19 at 10.04.36 PM.jpeg",
-                    "assets/WhatsApp Image 2024-12-19 at 10.04.47 PM.jpeg", "assets/WhatsApp Image 2024-12-19 at 10.04.52 PM.jpeg", "assets/WhatsApp Image 2024-12-19 at 10.05.16 PM.jpeg",
-                    "assets/2024_03_14_01_46_IMG_9039.JPG", "assets/2024_04_21_19_25_IMG_9722.JPG", "assets/2024_06_12_14_02_IMG_0530.JPG", "assets/2024_07_29_23_22_IMG_1313.JPG"
-                ];
-                document.write(images.map(img => `
-                    <div class="col-md-4">
-                        <a href="${img}" data-lightbox="gallery"><img src="${img}" class="img-fluid"></a>
-                    </div>`).join(''));
-            </script>
+        <div id="galleryCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <script>
+                    const images = [
+                        "assets/IMG_20250108_203338.jpg", "assets/IMG_20250108_203420.jpg",
+                        "assets/WhatsApp Image 2024-12-18 at 12.20.13 AM.jpeg", "assets/WhatsApp Image 2024-12-18 at 12.20.14 AM.jpeg"
+                    ];
+                    document.write(images.map((img, index) => `
+                        <div class="carousel-item ${index === 0 ? 'active' : ''}">
+                            <img src="${img}" class="d-block w-100" alt="Image ${index + 1}">
+                        </div>`).join(''));
+                </script>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#galleryCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#galleryCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
         </div>
     </section>
 
@@ -66,10 +77,10 @@
     </section>
 
     <!-- Vidéo de Présentation -->
-    <section class="container my-5">
-        <h2 class="text-center">Présentation Vidéo</h2>
+    <section class="container my-5 text-center">
+        <h2>Présentation Vidéo</h2>
         <div class="ratio ratio-16x9">
-            <iframe src="https://www.youtube.com/embed/TON_VIDEO_ID" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/FoVZkyC13QM" allowfullscreen></iframe>
         </div>
     </section>
 
@@ -83,7 +94,13 @@
     <section id="contact" class="container my-5 text-center">
         <h2>Contact</h2>
         <p>Email: <a href="mailto:kakoro.malick5@gmail.com">kakoro.malick5@gmail.com</a></p>
+        <p>WhatsApp: <a href="https://wa.me/626928839" target="_blank">626928839</a></p>
     </section>
+
+    <!-- Copyright -->
+    <footer>
+        <p>&copy; 2025 Kakoro Malick. Tous droits réservés.</p>
+    </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
