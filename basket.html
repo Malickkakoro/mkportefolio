@@ -23,7 +23,6 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="#gallery">Galerie</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#parcours">Parcours</a></li>
                     <li class="nav-item"><a class="nav-link" href="#cv">CV</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
@@ -41,33 +40,45 @@
     <section id="gallery" class="container my-5">
         <h2 class="text-center">Galerie</h2>
         <div class="row g-3">
-            <div class="col-md-3 col-6">
-                <a href="assets/image1.jpg" data-lightbox="gallery"><img src="assets/image1.jpg" class="img-fluid"></a>
-            </div>
-            <div class="col-md-3 col-6">
-                <a href="assets/image2.jpg" data-lightbox="gallery"><img src="assets/image2.jpg" class="img-fluid"></a>
-            </div>
-            <div class="col-md-3 col-6">
-                <a href="assets/image3.jpg" data-lightbox="gallery"><img src="assets/image3.jpg" class="img-fluid"></a>
-            </div>
-            <div class="col-md-3 col-6">
-                <a href="assets/image4.jpg" data-lightbox="gallery"><img src="assets/image4.jpg" class="img-fluid"></a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Présentation vidéo -->
-    <section class="container my-5">
-        <h2 class="text-center">Présentation Vidéo</h2>
-        <div class="ratio ratio-16x9">
-            <iframe src="https://www.youtube.com/embed/FoVZkyC13QM" allowfullscreen></iframe>
+            <script>
+                const images = [
+                    "IMG_5448.JPG", "IMG_5449.jpg", "IMG_5450.JPG", "IMG_5451.JPG", "IMG_5452.jpg",
+                    "WhatsApp Image 2024-12-18 at 12.20.13 AM.jpeg",
+                    "WhatsApp Image 2024-12-18 at 12.20.14 AM.jpeg",
+                    "WhatsApp Image 2024-12-18 at 12.20.16 AM (1).jpeg",
+                    "WhatsApp Image 2024-12-18 at 12.20.16 AM.jpeg",
+                    "WhatsApp Image 2024-12-18 at 12.20.18 AM (1).jpeg",
+                    "WhatsApp Image 2024-12-18 at 12.21.19 AM.jpeg",
+                    "WhatsApp Image 2024-12-19 at 10.04.36 PM.jpeg",
+                    "WhatsApp Image 2024-12-19 at 10.04.47 PM.jpeg",
+                    "WhatsApp Image 2024-12-19 at 10.04.52 PM.jpeg",
+                    "WhatsApp Image 2024-12-19 at 10.05.16 PM.jpeg",
+                    "2024_03_14_01_46_IMG_9039.JPG",
+                    "2024_04_21_19_25_IMG_9722.JPG",
+                    "2024_06_12_14_02_IMG_0530.JPG",
+                    "2024_07_29_23_22_IMG_1313.JPG",
+                    "IMG_20250108_203338.jpg",
+                    "IMG_20250108_203420.jpg"
+                ];
+                document.write('<div class="row g-3">');
+                images.forEach(img => {
+                    document.write(`
+                        <div class="col-md-3 col-6">
+                            <a href="assets/${img}" data-lightbox="gallery">
+                                <img src="assets/${img}" class="img-fluid">
+                            </a>
+                        </div>
+                    `);
+                });
+                document.write('</div>');
+            </script>
         </div>
     </section>
 
     <!-- Section CV -->
     <section id="cv" class="container my-5 text-center">
         <h2>Mon CV</h2>
-        <a href="assets/cv_comptabilite.pdf" class="btn btn-primary" download>Télécharger Mon CV</a>
+        <a href="assets/CV Comptabilité simple.pdf" class="btn btn-primary" download>Télécharger Mon CV</a>
     </section>
 
     <!-- Section Contact -->
