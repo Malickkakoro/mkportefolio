@@ -121,9 +121,11 @@
             <div class="col-md-6">
                 <h2 class="section-title">Mes Performances</h2>
                 <p>Découvrez mes meilleures performances en vidéo et images.</p>
+                <!-- Galerie miniature -->
                 <div class="d-flex flex-wrap">
-                    <img src="assets/WhatsApp Image 2024-12-18 at 12.20.13 AM.jpeg" alt="Performance" class="gallery zoom mb-3" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openImage(this)">
-                    <img src="assets/WhatsApp Image 2024-12-18 at 12.20.14 AM.jpeg" alt="Performance" class="gallery zoom mb-3" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openImage(this)">
+                    <img src="assets/WhatsApp Image 2024-12-18 at 12.20.13 AM.jpeg" alt="Performance 1" class="gallery zoom mb-3" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openImage(this)">
+                    <img src="assets/WhatsApp Image 2024-12-18 at 12.20.14 AM.jpeg" alt="Performance 2" class="gallery zoom mb-3" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openImage(this)">
+                    <img src="assets/WhatsApp Image 2024-12-18 at 12.20.15 AM.jpeg" alt="Performance 3" class="gallery zoom mb-3" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openImage(this)">
                     <!-- Ajouter d'autres images ici -->
                 </div>
             </div>
@@ -169,21 +171,36 @@
 
     <!-- Contact -->
     <section id="contact" class="container my-5 text-center">
-        <h2 class="section-title">Contact</h2>
-        <p>Email : <a href="mailto:kakoro.malick5@gmail.com">kakoro.malick5@gmail.com</a></p>
-        <p>WhatsApp : <a href="https://wa.me/626928839">+224 626928839</a></p>
+        <h2 class="section-title">Contactez-moi</h2>
+        <p>Pour toute demande, n'hésitez pas à me contacter via le formulaire ci-dessous :</p>
+        <form>
+            <div class="mb-3">
+                <label for="name" class="form-label">Nom</label>
+                <input type="text" class="form-control" id="name" placeholder="Votre nom">
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="Votre email">
+            </div>
+            <div class="mb-3">
+                <label for="message" class="form-label">Message</label>
+                <textarea class="form-control" id="message" rows="3" placeholder="Votre message"></textarea>
+            </div>
+            <button type="submit" class="btn btn-custom">Envoyer</button>
+        </form>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2025 Kakoro Malick. Tous droits réservés.</p>
+        <p>© 2025 Kakoro Malick | Tous droits réservés</p>
     </footer>
 
+    <!-- Bootstrap JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 
     <script>
         function openImage(element) {
-            const modalImage = document.getElementById("modalImage");
+            var modalImage = document.getElementById("modalImage");
             modalImage.src = element.src;
         }
     </script>
