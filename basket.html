@@ -138,6 +138,22 @@
         <a href="assets/CV_Kakoro_Malick.pdf" class="btn btn-primary" download>Télécharger mon CV</a>
     </section>
 
+    <!-- Galerie Vidéo -->
+    <section id="video-gallery" class="container my-5">
+        <h2 class="section-title">Galerie Vidéo</h2>
+        <div class="row">
+            <a href="https://www.youtube.com/watch?v=k6mFF3VmVAs" data-toggle="lightbox" data-gallery="youtubevideos" class="col-sm-4">
+                <img src="https://i1.ytimg.com/vi/yP11r5n5RNg/mqdefault.jpg" class="img-fluid">
+            </a>
+            <a href="https://youtu.be/iQ4D273C7Ac?start=30" data-toggle="lightbox" data-gallery="youtubevideos" class="col-sm-4">
+                <img src="https://i1.ytimg.com/vi/iQ4D273C7Ac/mqdefault.jpg" class="img-fluid">
+            </a>
+            <a href="//www.youtube.com/embed/dQw4w9WgXcQ" data-toggle="lightbox" data-gallery="youtubevideos" class="col-sm-4">
+                <img src="https://i1.ytimg.com/vi/dQw4w9WgXcQ/mqdefault.jpg" class="img-fluid">
+            </a>
+        </div>
+    </section>
+
     <!-- Modal pour afficher l'image en grand -->
     <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -163,44 +179,22 @@
     <!-- Réseaux sociaux -->
     <section id="social-media" class="container my-5">
         <div class="social-media">
-            <a href="https://www.facebook.com/yourprofile" target="_blank"><i class="fab fa-facebook"></i></a>
-            <a href="https://www.instagram.com/yourprofile" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
         </div>
     </section>
 
-    <!-- Contact -->
-    <section id="contact" class="container my-5 text-center">
-        <h2 class="section-title">Contactez-moi</h2>
-        <p>Pour toute demande, n'hésitez pas à me contacter via le formulaire ci-dessous :</p>
-        <form>
-            <div class="mb-3">
-                <label for="name" class="form-label">Nom</label>
-                <input type="text" class="form-control" id="name" placeholder="Votre nom">
-            </div>
-            <div class="mb-3">
-                <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email" placeholder="Votre email">
-            </div>
-            <div class="mb-3">
-                <label for="message" class="form-label">Message</label>
-                <textarea class="form-control" id="message" rows="3" placeholder="Votre message"></textarea>
-            </div>
-            <button type="submit" class="btn btn-custom">Envoyer</button>
-        </form>
-    </section>
-
-    <!-- Footer -->
     <footer>
-        <p>© 2025 Kakoro Malick | Tous droits réservés</p>
+        <p>&copy; 2025 Kakoro Malick</p>
     </footer>
 
-    <!-- Bootstrap JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-
     <script>
-        function openImage(element) {
-            var modalImage = document.getElementById("modalImage");
-            modalImage.src = element.src;
+        // Script pour afficher l'image en grand dans le modal
+        function openImage(img) {
+            const modalImage = document.getElementById('modalImage');
+            modalImage.src = img.src;
         }
     </script>
 </body>
