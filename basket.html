@@ -42,30 +42,35 @@
         <p>Bienvenue sur mon profil ! Je suis Kakoro Malick, un basketteur passionné avec un palmarès solide et une ambition sans limites. Découvrez mon parcours, mes performances et mes projets.</p>
     </section>
 
-    <!-- Profil Joueur -->
-    <section class="container my-5 text-center">
-        <h2>Profil du Joueur</h2>
-        <p><strong>Nom :</strong> Kakoro Malick</p>
-        <p><strong>Taille :</strong> 1.76m</p>
-        <p><strong>Poste :</strong> Meneur</p>
-        <p><strong>Palmarès :</strong> Champion universitaire 2021, Champion inter-scolaire 2016</p>
-    </section>
+    <!-- Profil et Galerie côte à côte -->
+    <section class="container my-5">
+        <div class="row">
+            <!-- Profil du joueur -->
+            <div class="col-md-6 text-center">
+                <h2>Profil du Joueur</h2>
+                <p><strong>Nom :</strong> Kakoro Malick</p>
+                <p><strong>Taille :</strong> 1.76m</p>
+                <p><strong>Poste :</strong> Meneur</p>
+                <p><strong>Palmarès :</strong> Champion universitaire 2021, Champion inter-scolaire 2016</p>
+            </div>
 
-    <!-- Galerie Miniatures -->
-    <section id="gallery" class="container my-5">
-        <h2 class="text-center">Galerie</h2>
-        <div class="d-flex flex-wrap justify-content-center gallery">
-            <script>
-                const images = [
-                    "WhatsApp Image 2024-12-18 at 12.20.13 AM.jpeg",
-                    "WhatsApp Image 2024-12-18 at 12.20.14 AM.jpeg",
-                    "WhatsApp Image 2024-12-18 at 12.20.16 AM (1).jpeg",
-                    "WhatsApp Image 2024-12-18 at 12.20.16 AM.jpeg"
-                ];
-                images.forEach(img => {
-                    document.write(`<img src="assets/${img}" alt="Miniature">`);
-                });
-            </script>
+            <!-- Galerie Miniatures -->
+            <div class="col-md-6">
+                <h2 class="text-center">Galerie</h2>
+                <div class="d-flex flex-wrap justify-content-center gallery">
+                    <script>
+                        const images = [
+                            "WhatsApp Image 2024-12-18 at 12.20.13 AM.jpeg",
+                            "WhatsApp Image 2024-12-18 at 12.20.14 AM.jpeg",
+                            "WhatsApp Image 2024-12-18 at 12.20.16 AM (1).jpeg",
+                            "WhatsApp Image 2024-12-18 at 12.20.16 AM.jpeg"
+                        ];
+                        images.forEach(img => {
+                            document.write(`<img src="assets/${img}" alt="Miniature">`);
+                        });
+                    </script>
+                </div>
+            </div>
         </div>
     </section>
 
