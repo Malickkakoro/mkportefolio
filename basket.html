@@ -15,10 +15,23 @@
         .btn-custom:hover { background-color: #ff6f61; }
         .profile-img { width: 200px; height: 200px; object-fit: cover; border-radius: 50%; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); }
         .section-title { font-size: 36px; text-align: center; margin-bottom: 40px; }
-        .gallery img { width: 100%; height: 100%; object-fit: cover; transition: 0.3s; border-radius: 10px; }
+        .gallery img { width: 100%; height: 100%; object-fit: cover; transition: 0.3s; border-radius: 10px; cursor: pointer; }
         .gallery img:hover { transform: scale(1.1); }
         .carousel-inner img { height: 400px; object-fit: cover; }
         footer { text-align: center; padding: 20px; background: #333; color: white; margin-top: 50px; }
+        .social-media { display: flex; justify-content: flex-end; gap: 15px; }
+        .social-media a { color: #333; font-size: 24px; transition: 0.3s; }
+        .social-media a:hover { color: #ff6f61; }
+        /* Zoom effect */
+        .zoom {
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+        .zoom:hover {
+            transform: scale(1.2);
+        }
+        .modal-dialog { max-width: 80%; }
+        .modal-body img { width: 100%; }
     </style>
 </head>
 <body>
@@ -43,12 +56,26 @@
                 <h2 class="section-title">Mes Performances</h2>
                 <p>Découvrez mes meilleures performances en vidéo et images.</p>
                 <div class="d-flex flex-wrap">
-                    <img src="assets/WhatsApp Image 2024-12-18 at 12.20.13 AM.jpeg" alt="Performance" class="gallery img-fluid mb-3">
-                    <img src="assets/WhatsApp Image 2024-12-18 at 12.20.14 AM.jpeg" alt="Performance" class="gallery img-fluid mb-3">
+                    <img src="assets/WhatsApp Image 2024-12-18 at 12.20.13 AM.jpeg" alt="Performance" class="gallery zoom mb-3" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openImage(this)">
+                    <img src="assets/WhatsApp Image 2024-12-18 at 12.20.14 AM.jpeg" alt="Performance" class="gallery zoom mb-3" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openImage(this)">
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Modal pour afficher l'image en grand -->
+    <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="" id="modalImage" alt="Image agrandie">
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Galerie avec Carousel -->
     <section id="gallery" class="container my-5">
@@ -81,6 +108,15 @@
         </a>
     </section>
 
+    <!-- Réseaux Sociaux -->
+    <section id="social-media" class="container my-5 text-right">
+        <h2 class="section-title">Suivez-moi</h2>
+        <div class="social-media">
+            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+    </section>
+
     <!-- Contact -->
     <section id="contact" class="container my-5 text-center">
         <h2 class="section-title">Contact</h2>
@@ -94,5 +130,12 @@
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        function openImage(element) {
+            const modalImage = document.getElementById("modalImage");
+            modalImage.src = element.src;
+        }
+    </script>
 </body>
 </html>
