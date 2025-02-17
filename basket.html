@@ -15,8 +15,22 @@
         .btn-custom:hover { background-color: #ff6f61; }
         .profile-img { width: 200px; height: 200px; object-fit: cover; border-radius: 50%; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); }
         .section-title { font-size: 36px; text-align: center; margin-bottom: 40px; }
-        .gallery img { width: 100%; height: 100%; object-fit: cover; transition: 0.3s; border-radius: 10px; cursor: pointer; }
-        .gallery img:hover { transform: scale(1.1); }
+        
+        /* Galerie : images miniatures */
+        .gallery img {
+            width: 120px; /* Taille miniature */
+            height: 120px; /* Taille miniature */
+            object-fit: cover;
+            transition: 0.3s;
+            border-radius: 10px;
+            cursor: pointer;
+            margin: 10px;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.1);
+        }
+
         .carousel-inner img { height: 400px; object-fit: cover; }
         footer { text-align: center; padding: 20px; background: #333; color: white; margin-top: 50px; }
         .social-media { display: flex; justify-content: flex-end; gap: 15px; }
@@ -107,6 +121,7 @@
                 <div class="d-flex flex-wrap">
                     <img src="assets/WhatsApp Image 2024-12-18 at 12.20.13 AM.jpeg" alt="Performance" class="gallery zoom mb-3" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openImage(this)">
                     <img src="assets/WhatsApp Image 2024-12-18 at 12.20.14 AM.jpeg" alt="Performance" class="gallery zoom mb-3" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openImage(this)">
+                    <!-- Ajouter d'autres images ici -->
                 </div>
             </div>
         </div>
