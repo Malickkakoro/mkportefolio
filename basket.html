@@ -3,21 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon Portfolio Sportif</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+    <title>Profil Joueur - Kakoro Malick</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
     <style>
-        body { background-color: #f8f9fa; font-family: Arial, sans-serif; }
-        .presentation-img { width: 100%; max-height: 300px; object-fit: cover; border-radius: 10px; }
-        .gallery img { width: 100%; height: 180px; object-fit: cover; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); }
-        .video-container { display: flex; justify-content: center; margin-top: 20px; }
+        body { background-color: #f8f9fa; }
+        .profile-img { width: 150px; height: 150px; object-fit: cover; border-radius: 50%; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); }
+        .carousel img { width: 100%; height: 300px; object-fit: cover; border-radius: 10px; }
+        iframe { width: 100%; height: 315px; border-radius: 10px; }
         footer { text-align: center; padding: 20px; background: #222; color: white; margin-top: 20px; }
     </style>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-            <a class="navbar-brand" href="#">Mon Portfolio Sportif</a>
+            <a class="navbar-brand" href="#">Mon Profil</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -32,51 +31,50 @@
         </div>
     </nav>
 
-    <!-- Section Présentation -->
+    <!-- Profil Joueur -->
     <section class="container my-5 text-center">
-        <h2>Bienvenue sur mon Portfolio Sportif</h2>
-        <img src="assets/IMG_20250108_203338.jpg" alt="Photo de Présentation" class="presentation-img">
+        <h2>Profil du Joueur</h2>
+        <img src="assets/IMG_20250108_203338.jpg" alt="Photo de Profil" class="profile-img">
+        <p><strong>Nom :</strong> Kakoro Malick</p>
+        <p><strong>Taille :</strong> 1.76m</p>
+        <p><strong>Poste :</strong> Meneur</p>
+        <p><strong>Palmarès :</strong> Champion universitaire 2021, Champion inter-scolaire 2016</p>
     </section>
 
-    <!-- Galerie d'images -->
+    <!-- Galerie avec Carousel -->
     <section id="gallery" class="container my-5">
         <h2 class="text-center">Galerie</h2>
-        <div class="row g-3">
-            <script>
-                const images = [
-                    "WhatsApp Image 2024-12-18 at 12.20.13 AM.jpeg",
-                    "WhatsApp Image 2024-12-18 at 12.20.14 AM.jpeg",
-                    "WhatsApp Image 2024-12-18 at 12.20.16 AM (1).jpeg",
-                    "WhatsApp Image 2024-12-18 at 12.20.16 AM.jpeg",
-                    "WhatsApp Image 2024-12-18 at 12.20.18 AM (1).jpeg",
-                    "WhatsApp Image 2024-12-21 at 10.04.36 PM.jpeg",
-                    "WhatsApp Image 2024-12-21 at 10.04.47 PM.jpeg",
-                    "WhatsApp Image 2024-12-21 at 10.04.52 PM.jpeg",
-                    "WhatsApp Image 2024-12-21 at 10.05.16 PM.jpeg",
-                    "IMG_20250108_203338.jpg",
-                    "IMG_20250108_203420.jpg"
-                ];
-                document.write('<div class="row g-3">');
-                images.forEach(img => {
-                    document.write(`
-                        <div class="col-md-3 col-6">
-                            <a href="assets/${img}" data-lightbox="gallery">
-                                <img src="assets/${img}" class="img-fluid">
-                            </a>
-                        </div>
-                    `);
-                });
-                document.write('</div>');
-            </script>
+        <div id="imageCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <script>
+                    const images = [
+                        "WhatsApp Image 2024-12-18 at 12.20.13 AM.jpeg",
+                        "WhatsApp Image 2024-12-18 at 12.20.14 AM.jpeg",
+                        "WhatsApp Image 2024-12-18 at 12.20.16 AM (1).jpeg",
+                        "WhatsApp Image 2024-12-18 at 12.20.16 AM.jpeg"
+                    ];
+                    images.forEach((img, index) => {
+                        document.write(`
+                            <div class="carousel-item ${index === 0 ? 'active' : ''}">
+                                <img src="assets/${img}" class="d-block w-100">
+                            </div>
+                        `);
+                    });
+                </script>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#imageCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#imageCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
         </div>
     </section>
 
-    <!-- Section Vidéos -->
+    <!-- Vidéos -->
     <section id="videos" class="container my-5 text-center">
-        <h2>Mes Vidéos</h2>
-        <div class="video-container">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/FoVZkyC13QM?si=0SXTTZCvZhiHt_Mt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
+        <h2>Mes Performances</h2>
+        <iframe src="https://www.youtube.com/embed/FoVZkyC13QM?si=0SXTTZCvZhiHt_Mt" allowfullscreen></iframe>
     </section>
 
     <!-- Section CV -->
@@ -97,6 +95,5 @@
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
 </body>
 </html>
