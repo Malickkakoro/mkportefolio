@@ -4,39 +4,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mon Profil - Kakoro Malick</title>
+
     <!-- Liens Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Liens CSS pour Lightbox -->
     <link href="https://cdn.jsdelivr.net/npm/bs5-lightbox@1.0.0/dist/index.min.css" rel="stylesheet">
 
+    <!-- Style personnalisé -->
     <style>
         body { background-color: #f8f9fa; }
-        .hero-section { background-image: url('https://via.placeholder.com/1600x900'); background-size: cover; background-position: center; color: white; text-align: center; padding: 100px 0; }
+
+        /* Section Hero */
+        .hero-section { 
+            background-image: url('https://via.placeholder.com/1600x900'); 
+            background-size: cover; 
+            background-position: center; 
+            color: white; 
+            text-align: center; 
+            padding: 100px 0;
+        }
         .hero-title { font-size: 50px; font-weight: bold; }
         .hero-subtitle { font-size: 20px; margin-top: 20px; }
         .btn-custom { background-color: #2e2e2e; color: white; padding: 10px 20px; border-radius: 30px; transition: 0.3s; }
         .btn-custom:hover { background-color: #ff6f61; }
-        .profile-img { width: 200px; height: 200px; object-fit: cover; border-radius: 50%; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); }
+
+        /* Section Profil */
+        .profile-img { 
+            width: 200px; 
+            height: 200px; 
+            object-fit: cover; 
+            border-radius: 50%; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
         .section-title { font-size: 36px; text-align: center; margin-bottom: 40px; }
 
+        /* Galerie */
         .gallery img { width: 120px; height: 120px; object-fit: cover; transition: 0.3s; border-radius: 10px; cursor: pointer; margin: 10px; }
         .gallery img:hover { transform: scale(1.1); }
+
+        /* Carousel */
         .carousel-inner img { height: 400px; object-fit: cover; }
+
+        /* Footer */
         footer { text-align: center; padding: 20px; background: #333; color: white; margin-top: 50px; }
-        .social-media { display: flex; justify-content: flex-end; gap: 15px; }
+
+        /* Réseaux sociaux */
+        .social-media { display: flex; justify-content: center; gap: 15px; }
         .social-media a { color: #333; font-size: 24px; transition: 0.3s; }
         .social-media a:hover { color: #ff6f61; }
 
         .zoom { transition: transform 0.3s ease; cursor: pointer; }
         .zoom:hover { transform: scale(1.2); }
-        .modal-dialog { max-width: 80%; }
-        .modal-body img { width: 100%; }
     </style>
 </head>
 <body>
 
-    <!-- Menu -->
+    <!-- Menu de navigation -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Kakoro Malick</a>
@@ -65,7 +89,7 @@
         </div>
     </nav>
 
-    <!-- Carousel -->
+    <!-- Section Carousel -->
     <section id="carousel-section" class="container my-5">
         <h2 class="section-title">Galerie</h2>
         <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
@@ -95,7 +119,7 @@
         <a href="#profile" class="btn-custom">En savoir plus</a>
     </section>
 
-    <!-- Profil -->
+    <!-- Section Profil -->
     <section id="profile" class="container my-5">
         <div class="row">
             <div class="col-md-6 text-center">
@@ -123,13 +147,13 @@
         </div>
     </section>
 
-    <!-- CV -->
+    <!-- Section CV -->
     <section id="cv" class="container my-5 text-center">
         <h2 class="section-title">Mon CV</h2>
         <a href="assets/CV_Kakoro_Malick.pdf" class="btn btn-primary" download>Télécharger mon CV</a>
     </section>
 
-    <!-- Vidéo -->
+    <!-- Section Vidéo -->
     <section id="video" class="container my-5 text-center">
         <h2 class="section-title">Ma Vidéo</h2>
         <a href="https://www.youtube.com/watch?v=FoVZkyC13QM" target="_blank">
@@ -155,5 +179,6 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bs5-lightbox@1.0.0/dist/index.bundle.min.js"></script>
+
 </body>
 </html>
